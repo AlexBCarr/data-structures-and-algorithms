@@ -27,8 +27,6 @@ const updateAnimal = (arr, callback) => {
   for(let i = 0; i < arr.length; i++){
     newArr.push(callback(arr[i]));
   }
-  // arr.sort((a,b) => a.toLowerCase() > b.toLowerCase() ? 1 : -1);
-  // let newArr = arr.filter(elements=> !callback.includes(elements));
   return newArr;
 
 };
