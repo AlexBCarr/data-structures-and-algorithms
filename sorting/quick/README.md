@@ -9,6 +9,7 @@ class Main {
     quickSort(unsortedArr, 0, unsortedArr.length - 1);
     System.out.println("sorted array: " + java.util.Arrays.toString(unsortedArr));
   }
+  
   static void quickSort(int[] arr, int low, int high) {
     if(low < high) {
       int pivotLocation = partition(arr, low, high);
@@ -16,6 +17,7 @@ class Main {
       quickSort(arr, pivotLocation + 1, high);
     }
   }
+  
   static int partition(int[] arr, int low, int high) {
     int pivot = arr[high];
     int leftwall = low;
@@ -27,6 +29,7 @@ class Main {
         leftwall+=1;
       }
     }
+    
     int temp = arr[leftwall];
     arr[leftwall] = arr[high];
     arr[high] = temp;
